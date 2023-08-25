@@ -1,6 +1,6 @@
 "use client";
 
-import { CldUploadButton } from "next-cloudinary";
+import { CldUploadButton ,  CldUploadWidgetResults} from "next-cloudinary";
 import { useRouter } from "next/navigation";
 
 type UploadResult = {
@@ -15,7 +15,7 @@ const UploadButton = () => {
   return (
     <>
       <CldUploadButton
-        onUpload={(result: UploadResult) => {
+        onUpload={(result: CldUploadWidgetResults) => {
           setTimeout(() => {
             router.refresh();
           }, 2000);
